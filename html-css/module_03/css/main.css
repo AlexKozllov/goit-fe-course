@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: Playfair Display;
+}
+
+.wrapper {
+  width: 911px;
+  margin: 0 auto;
+  padding-top: 0px;
+}
+
+.inline {
+  display: flex;
+}
+.list_nav {
+  width: 911px;
+  list-style-type: none;
+  padding: 77px 0px 100px 0px;
+}
+
+.link_lifestyle {
+  display: inline;
+  padding-left: 165px;
+}
+.link_photodiary {
+  display: inline;
+  padding-left: 122px;
+}
+.link_musik {
+  display: inline;
+  padding-left: 104px;
+}
+.link_travel {
+  display: inline;
+  padding-left: 94px;
+}
+
+.nav_link {
+  text-transform: uppercase;
+  text-align: center;
+  color: #626262;
+  text-decoration: none;
+}
+.nav_link:hover {
+  color: #03a9f4;
+}
+
+.box {
+  display: inline-block;
+  width: 420px;
+  height: 480px;
+}
+.left {
+  margin: 0px 30px 107px 0px;
+}
+.right {
+  margin: 0px 0px 107px 30px;
+}
+.down {
+  margin-bottom: 0px;
+}
+
+.my_h2 {
+  color: #626262;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.my_article {
+  color: #626262;
+  font-size: 14px;
+  padding: 33px 0px 0px 0px;
+}
+
+.insctiption {
+  font-family: "Roboto", sans-serif;
+  color: #b4ad9e;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 26px 0px 17px 0px;
+}
+
+.my_button:hover {
+  color: #03a9f4;
+  border: 1px solid #03a9f4;
+}
+
+.my_button {
+  width: 164px;
+  height: 62px;
+  border: 1px solid #626262;
+  display: block;
+  margin: 58px auto 70px;
+  color: #626262;
+  font-size: 20px;
+  background-color: #ffffff;
+}

@@ -1,0 +1,456 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+@import '_vars.scss';
+@import 'normalize.scss';
+@import 'base.scss';
+
+@import 'font.scss';
+
+/*================ Header ================*/
+
+.my-header {
+  max-width: 1204px;
+  height: 66px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  // background: #ddd;
+}
+
+.site-logo__link {
+  font-size: 30px;
+  font-family: $Montserrat700;
+  color: $color-logo;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+.main-nav {
+  width: 51.6%;
+}
+
+.main-nav__list {
+  width: 621px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-nav__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main-nav__link {
+  height: 29px;
+  font-size: 14px;
+  font-family: $Montserrat700;
+  color: $color-logo-link;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2;
+  border-bottom: 0px solid;
+  transition: border-bottom 0.2s linear, color 0.2s linear;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  // box-sizing: content-box; /* 1 */
+  // &:hover {
+  // color: $color-logo-link-hover;
+  // border-bottom: 3px solid $color-logo-link-underline;
+  // }
+}
+
+.main-nav__link--hover:hover {
+  color: $color-logo-link-hover;
+  border-bottom: 3px solid $color-logo-link-underline;
+}
+
+.main-nav__icon-header {
+  width: 18px;
+  height: 18px;
+  fill: $color-svg;
+  transition: fill 0.2s linear;
+  // &:hover {
+  // fill: $color-logo-link-hover;
+  // }
+}
+
+.main-nav__icon-header--hover:hover {
+  fill: $color-logo-link-hover;
+}
+
+/* ====================== Section WELCOME +++++++++============= */
+
+.welcome {
+  height: 1000px;
+  margin: 0 auto;
+  margin-top: -66px;
+  margin-bottom: 45px;
+  background: linear-gradient(
+      180deg,
+      rgba(232, 129, 130, 0.9) 0%,
+      rgba(239, 217, 138, 0.9) 100%
+    ),
+    url(../img/Layer_15.jpg) no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .welcome {
+    background: linear-gradient(
+        180deg,
+        rgba(232, 129, 130, 0.9) 0%,
+        rgba(239, 217, 138, 0.9) 100%
+      ),
+      url(../img/Layer_15@2x.jpg) no-repeat;
+  }
+}
+
+.welcome__header {
+  margin-bottom: 30px;
+  margin: 0;
+  font-size: 72px;
+  font-family: $KaushanScript;
+  color: $color-welcome-header;
+  line-height: 1.2;
+}
+
+.welcome__text {
+  margin: 70px;
+  width: 800px;
+  font-size: 150px;
+  font-family: $Montserrat700;
+  color: $color-welcome-text;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.933;
+  // margin-bottom: 118px;
+}
+
+.welcome__learn-more {
+  width: 160px;
+  height: 40px;
+  border: 3px solid $color-welcome-text;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: $Montserrat400;
+  color: $color-welcome-text;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  &:hover {
+    background-color: $color-batton-hover;
+  }
+}
+
+/* =========== Section AMAZING SERVICES ========== */
+
+.services {
+  max-width: 1204px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-header__before {
+  font-size: 24px;
+  font-family: $KaushanScript;
+  color: $color-text;
+  line-height: 1.2;
+}
+
+.section-header__text {
+  margin-top: 14px;
+  font-size: 30px;
+  font-family: $Montserrat700;
+  color: $color-text;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.8;
+  letter-spacing: -0.015em;
+  &::after {
+    content: '____';
+    display: block;
+    margin-top: 12px;
+    color: #f38181;
+  }
+}
+
+.services__list {
+  margin-top: 41px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.services__item {
+  width: 381px;
+  margin: 10px 9px 0 9px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.services__item-icon {
+  margin: 20px 20px;
+  width: 60px;
+  height: 31px;
+  fill: #95e1d3;
+}
+
+.services__item-header {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-family: $Montserrat700;
+  color: $color-text;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: -0.05em;
+}
+
+.services__item-text {
+  padding-left: 10px;
+  font-size: 15px;
+  font-family: $Roboto400;
+  color: rgb(153, 153, 153);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* =========== Section MEET OUR TEAM ========== */
+
+.our-team {
+  max-width: 1204px;
+  margin: 0 auto;
+  margin-top: 4px;
+  text-align: center;
+  display: block;
+}
+
+.our-team__text {
+  max-width: 950px;
+  margin: 0 auto;
+  margin-top: 36px;
+  font-size: 15px;
+  font-family: $Roboto400;
+  color: rgb(153, 153, 153);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.our-team__list {
+  margin-top: 63px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.our-team-name {
+  margin-top: 24px;
+  font-size: 14px;
+  font-family: $Montserrat700;
+  color: $color-text;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.our-team-position {
+  margin-top: 7px;
+  font-size: 15px;
+  font-family: $Roboto400;
+  color: rgb(153, 153, 153);
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.our-team__item {
+  position: relative;
+}
+
+.our-team-photo {
+  width: 320px;
+  height: 470px;
+  display: block;
+  transition: all 0.2s linear;
+}
+
+/* ================ Card_Hover ================== */
+
+.card-hover {
+  width: 380px;
+  height: 470px;
+  background: linear-gradient(
+    180deg,
+    rgba(232, 129, 130, 0.9) 0%,
+    rgba(239, 217, 138, 0.9) 100%
+  );
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s linear;
+}
+
+.cacd-hover__item-icon {
+  width: 25px;
+  height: 25px;
+  fill: #f38181;
+  transition: fill 0.2s linear;
+}
+
+.card-hover__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cacd-hover__item {
+  width: 56px;
+  height: 56px;
+  margin: 1px;
+}
+
+.our-team__item:hover {
+  .our-team-photo {
+    transform: translate(-10px, -10px);
+  }
+  .card-hover {
+    box-shadow: 10px 10px #95e1d3;
+    opacity: 1;
+    transform: translate(-10px, -10px);
+  }
+}
+
+.card-holder__link {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $color-bg-ikons;
+  &:hover {
+    background: $color-bg-ikons-hover;
+  }
+}
+
+.card-holder__link:hover .cacd-hover__item-icon {
+  fill: #fff;
+}
+
+/*----------------- Footer ----------------*/
+
+hr {
+  margin-top: 80px;
+  border: none;
+  background-color: #e5e5e5;
+  height: 1px;
+}
+
+.my-footer {
+  max-width: 1201px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__box {
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.footer__copyright {
+  padding-left: 5px;
+  font-size: 14px;
+  font-family: $Montserrat400;
+  color: $color-text;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.copyright__author {
+  margin-left: 4px;
+  transition: color 0.2s linear;
+  &:hover .author {
+    color: #f38181;
+  }
+}
+
+.footer__e-mail {
+  margin-right: 0;
+  padding-left: 10px;
+  width: 230px;
+  height: 40px;
+  border: 1px solid #e5e5e5;
+  border-right: none;
+  color: -internal-light-dark-color(rgb(233, 31, 31), rgb(235, 10, 10));
+  font-size: 15px;
+  font-family: $Roboto400;
+  color: #929292;
+  font-style: italic;
+  line-height: 1.6;
+  &::placeholder {
+    color: rgb(204, 204, 204);
+  }
+  &:focus {
+    outline-offset: 0px;
+    border: 1px solid #929292;
+    outline: none;
+    border: 1px solid #929292;
+  }
+}
+
+.footer__subscribe {
+  margin-left: -5px;
+  width: 150px;
+  height: 40px;
+  background-color: #95e1d3;
+  border: none;
+  font-size: 14px;
+  font-family: $Montserrat700;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  transition: background-color 0.2s linear;
+  &:focus {
+    outline-offset: 0px;
+    border: 1px solid #929292;
+    outline: none;
+    border: 1px solid #929292;
+  }
+
+  &:hover {
+    background-color: $color-button-subscribe;
+  }
+}

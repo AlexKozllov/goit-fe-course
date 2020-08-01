@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: unset;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*----------------- Header -----------------*/
+
+.site_header {
+  max-width: 94em;
+  height: 5em;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  font-size: 3em;
+  font-family: "GreatVibes-Regular";
+  color: #fed136;
+}
+
+.menu_list {
+  margin-top: 0.8em;
+  display: flex;
+  flex-direction: row;
+  width: 47.9em;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_link {
+  font-size: 1.4em;
+  font-family: "Montserrat_Regular";
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 600;
+  transition: color 0.2s linear;
+}
+
+.nav_link:hover {
+  color: #fed136;
+}
+
+/* -----------------Section 1 --------------------*/
+
+.service {
+  width: 94em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my_h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4em;
+  font-family: "Montserrat_Bold";
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+}
+
+.after_h2 {
+  margin-top: 0.4em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.6em;
+  font-family: "Playfair Display";
+  color: rgb(119, 119, 119);
+  letter-spacing: 0.04em;
+}
+
+.servisce_article {
+  margin-top: 8em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.service_article_list {
+  width: 30%;
+  height: 18.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1.1em;
+  border: solid 3px #fed136;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.list_header {
+  font-size: 1.8em;
+  font-family: "Montserrat_Bold";
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  letter-spacing: -0.05em;
+}
+
+.text-article {
+  font-size: 1.32em;
+  font-family: "Roboto Slab";
+  color: rgb(119, 119, 119);
+  line-height: 1.7;
+  text-align: center;
+  text-indent: 0.2em;
+}
+
+/*----------------- Section 2 ----------------*/
+
+.contact_us {
+  height: 67.7em;
+  margin-top: 11.6em;
+  padding: 10em;
+  background: url(../img/map_image.png) no-repeat right,
+    linear-gradient(130deg, rgba(34, 34, 34, 1) 0%, rgba(34, 34, 34, 1) 100%);
+}
+
+.h2_color {
+  color: #fff;
+}
+
+.p_color {
+  margin-top: 0.6em;
+  color: #777;
+}
+
+.box_fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.fields {
+  width: 94.1em;
+  margin-top: 7.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fields_colom {
+  width: 33em;
+  height: 21.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.entry_field {
+  width: 32.7em;
+  height: 3.9em;
+  border-radius: 5px;
+  font-size: 1.4em;
+  font-family: "Montserrat_Bold";
+  color: #000;
+  text-transform: uppercase;
+  padding-left: 1.4em;
+}
+
+.forma {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn_submit {
+  width: 15.3em;
+  height: 4.2em;
+  background-color: #fed136;
+  border-radius: 5px;
+  margin-top: 1.7em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.6em;
+  font-family: "Montserrat_Bold";
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.2s linear;
+}
+
+.btn_submit:hover {
+  background-color: #b99a2a;
+}
+
+.messege_file {
+  width: 32.7em;
+  height: 15.1em;
+  margin-left: 0.7em;
+  border-radius: 5px;
+  font-size: 1.4em;
+  font-family: "Montserrat_Bold";
+  font-weight: bold;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 1.2em;
+  padding-left: 1.4em;
+}
+
+.messege_file::placeholder {
+  color: #bbb;
+}
+
+.messege_file:focus {
+  outline: none;
+}
+
+.entry_field::placeholder {
+  color: #bbb;
+}
+
+.entry_field:focus {
+  outline: none;
+}
