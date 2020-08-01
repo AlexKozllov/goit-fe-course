@@ -13,3 +13,16 @@ const user = {
   hobby: "html",
   premium: true,
 };
+
+user.mood = "happy";
+console.log(user);
+user.hobby = "skydiving";
+console.log(user);
+user.premium = false;
+console.log(user);
+
+const keys = Object.keys(user);
+console.log(keys);
+for (let el of keys) {
+  console.log(`${el}: ${user[el]}`);
+}
