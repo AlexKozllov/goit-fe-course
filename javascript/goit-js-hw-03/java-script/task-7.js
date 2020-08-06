@@ -31,17 +31,25 @@ const account = {
     const objextTransaction = {
       type,
       amount,
+      // id: Math.floor(Math.random() * 100),
+      id: 9999,
     };
+
     return objextTransaction;
   },
-
   /*
    * Метод отвечающий за добавление суммы к балансу.
    * Принимает сумму танзакции.
    * Вызывает createTransaction для создания объекта транзакции
    * после чего добавляет его в историю транзакций
    */
-  deposit(amount) {},
+  deposit(amount) {
+    this.createTransaction;
+    this.createTransaction.amount += amount;
+    this.transactions.push(this.createTransaction.id);
+    console.log(this.transactions);
+    console.log(this.createTransaction.id);
+  },
 
   /*
    * Метод отвечающий за снятие суммы с баланса.
@@ -71,4 +79,6 @@ const account = {
   getTransactionTotal(type) {},
 };
 
-console.log(account);
+console.log(account.deposit(100));
+console.log(account.createTransaction.id);
+console.log(account.balance);
