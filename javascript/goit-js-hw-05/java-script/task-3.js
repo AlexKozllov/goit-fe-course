@@ -14,8 +14,7 @@ class Storage {
     this.items = array;
   }
   getItems() {
-    console.log(this.items);
-    // return this.items;
+    return this.items;
   }
   addItem(array) {
     this.items.push(array);
