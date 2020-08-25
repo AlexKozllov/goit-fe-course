@@ -7,9 +7,6 @@ const users = user.default;
 
 const getUserNames = (users) => {
   return users.map((el) => el.name);
-  // users.forEach((element) => {
-  //   element.name;
-  // });
 };
 
 console.log(getUserNames(users));
@@ -43,7 +40,7 @@ console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazq
 // Получить массив только неактивных пользователей(поле isActive).
 
 const getInactiveUsers = (users) => {
-  return users.filter((el) => el.isActive === false);
+  return users.filter((el) => !el.isActive);
 };
 
 console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
@@ -110,19 +107,16 @@ console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sher
 // друзей(поле friends)
 
 const getNamesSortedByFriendsCount = (users) => {
-  // return users.reduce((acc, el) => {
-  //   console.log(el.friends.sort((a, b) => a - b));
-  //   return acc;
-  // }, []);
-
-  users.reduce((acc, el) => {
-    el.numbOfFriends = el.friends.length;
-  }, []);
   users.sort((a, b) => a.numbOfFriends - b.numbOfFriends);
-  return users.reduce((bcc, element) => {
-    bcc.push(element.name);
-    return bcc;
-  }, []);
+  // return users.reduce((bcc, element) => {
+  //   bcc.push(element.name);
+  //   return bcc;
+  // }, []);
+  return users.map((el) => {
+    let acc = [];
+    acc += el.name;
+    return acc;
+  });
 };
 
 console.log(getNamesSortedByFriendsCount(users));
@@ -135,15 +129,13 @@ console.log(getNamesSortedByFriendsCount(users));
 // повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
 const getSortedUniqueSkills = (users) => {
-  return users.reduce((acc, elem) => {
-    acc.find((el) => el === elem.skills);
+  let skills = users.reduce((acc, elem) => {
     acc.push(...elem.skills);
-    acc.sort();
     return acc.filter((item, pos) => {
-      return acc.indexOf(item) == pos;
+      return acc.indexOf(item) === pos;
     });
   }, []);
+  return skills.sort();
 };
-
 console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'm
