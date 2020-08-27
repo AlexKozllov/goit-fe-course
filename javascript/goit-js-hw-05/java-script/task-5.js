@@ -43,7 +43,7 @@ class Car {
     return this._price;
   }
   set price(value) {
-    return (this._price = value);
+    this._price = value;
   }
 
   /*
@@ -51,7 +51,7 @@ class Car {
    * Записывает в свойство isOn значение true
    */
   turnOn() {
-    return (this.isOn = true);
+    this.isOn = true;
   }
 
   /*
@@ -60,7 +60,8 @@ class Car {
    * и сбрасывает текущую скорость в 0
    */
   turnOff() {
-    return (this.isOn = false), (this.speed = 0);
+    this.isOn = false;
+    this.speed = 0;
   }
 
   /*
@@ -69,7 +70,9 @@ class Car {
    * не больше чем значение свойства maxSpeed
    */
   accelerate(value) {
-    if (this.speed + value <= this.maxSpeed) return (this.speed += value);
+    if (this.speed + value <= this.maxSpeed) {
+      this.speed += value;
+    }
   }
 
   /*
@@ -77,7 +80,9 @@ class Car {
    * при условии что результирующая скорость не меньше нуля
    */
   decelerate(value) {
-    if (this.speed - value >= 0) return (this.speed -= value);
+    if (this.speed - value >= 0) {
+      this.speed -= value;
+    }
   }
 
   /*
@@ -85,7 +90,7 @@ class Car {
    * но только в том случае если машина заведена!
    */
   drive(hours) {
-    if (this.isOn == true) {
+    if (this.isOn) {
       this.distance = this.distance + hours * this.speed;
     }
   }

@@ -10,21 +10,20 @@
 // removeItem(item) - получет товар и, если он есть, удаляет его из текущих
 
 class Storage {
-  constructor(array) {
-    this.items = array;
+  constructor(product) {
+    this.items = product;
   }
   getItems() {
     return this.items;
   }
-  addItem(array) {
-    this.items.push(array);
-    return this.items;
+  addItem(product) {
+    this.items.push(product);
   }
-  removeItem(array) {
-    if (this.items.indexOf(array) !== -1) {
-      this.items.splice(this.items.indexOf(array), 1);
+  removeItem(product) {
+    const itemIndex = this.items.indexOf(product);
+    if (itemIndex !== -1) {
+      this.items.splice(itemIndex, 1);
     }
-    return this.items;
   }
 }
 
