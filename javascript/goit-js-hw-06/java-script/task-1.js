@@ -107,10 +107,10 @@ console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sher
 // друзей(поле friends)
 
 const getNamesSortedByFriendsCount = (users) => {
-  users.sort((a, b) => a.numbOfFriends - b.numbOfFriends);
-  return users.map((el) => el.name);
+  return users
+    .sort((a, b) => a.friends.length - b.friends.length)
+    .map((el) => el.name);
 };
-
 console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazque
 
@@ -127,7 +127,7 @@ const getSortedUniqueSkills = (users) => {
     // return acc.filter((item, pos) => {
   }, []);
   const skillsClean = skills.filter((item, pos) => {
-    return skills.indexOf(item) == pos;
+    return skills.indexOf(item) === pos;
   });
   return skillsClean.sort();
 };
