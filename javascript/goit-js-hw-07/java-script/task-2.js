@@ -13,13 +13,10 @@ const ingredients = [
   "Приправы",
 ];
 
-// let textlI;
 const ulIngredients = document.getElementById("ingredients");
-// console.dir(ulIngredients);
 
 ingredients.forEach((el) => {
   const textLi = document.createElement("li");
-  console.log(textLi);
   textLi.textContent = el;
   ulIngredients.append(textLi);
 });

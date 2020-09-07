@@ -25,26 +25,21 @@ const images = [
 ];
 
 const gallery = document.querySelector("#gallery");
-console.log(gallery);
 
 images.forEach((el) => {
   const imgOfGallery = `<li><img src="${el.url}" alt="${el.alt}" class='myImg'> </li>`;
-  console.log(imgOfGallery);
-  // return imgOfGallery;
-  // const newItemLi = document.querySelectorAll(".myImg");
   gallery.insertAdjacentHTML("afterbegin", imgOfGallery);
 });
-// console.log(liOfGallery);
 
-const newItemLi = document.querySelectorAll(".myImg");
-console.log(newItemLi);
+// ------------  Просто пробовал  ------------
 
-newItemLi.forEach((element) => {
-  console.dir(element);
-  element.style.width = "250px";
-});
+// const newItemLi = document.querySelectorAll(".myImg");
 
-gallery.style.listStyle = "none";
-gallery.style.display = "flex";
-gallery.style.flexDirection = "row";
-gallery.style.justifyContent = "space-between";
+// newItemLi.forEach((element) => {
+// element.style.width = "250px";
+// });
+
+// gallery.style.listStyle = "none";
+// gallery.style.display = "flex";
+// gallery.style.flexDirection = "row";
+// gallery.style.justifyContent = "space-between";
