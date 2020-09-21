@@ -14,13 +14,11 @@
 
 const ulCategories = document.getElementById("categories");
 
-// const categories = ulCategories.querySelectorAll("ul");
-
 console.log(`В списке ${ulCategories.childElementCount} категории.`);
 
-const list = ulCategories.children;
+const list = Array.from(ulCategories.children);
 
-for (let object of list) {
+list.forEach((object) => {
   console.log(`Категория: ${object.children[0].textContent}`);
   console.log(`Количество элементов: ${object.children[1].children.length}`);
-}
+});

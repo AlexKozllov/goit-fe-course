@@ -15,8 +15,9 @@ const ingredients = [
 
 const ulIngredients = document.getElementById("ingredients");
 
-ingredients.forEach((el) => {
+const list = ingredients.map((el) => {
   const textLi = document.createElement("li");
   textLi.textContent = el;
-  ulIngredients.append(textLi);
+  return textLi;
 });
+ulIngredients.append(...list);
