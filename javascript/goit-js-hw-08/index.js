@@ -6,7 +6,7 @@ const ulGallery = document.querySelector(".js-gallery");
 const lightboxImage = document.querySelector(".lightbox__image");
 const lightboxButton = document.querySelector(".lightbox__button");
 const lightbox = document.querySelector(".lightbox");
-const lightboxContent = document.querySelector(".lightbox__content");
+const lightboxContent = document.querySelector("lightbox__overlay");
 
 // gallery.forEach((object) => {
 //   let i = 0;
@@ -47,39 +47,55 @@ const arrGallery = gallery.map((object, index) => {
 });
 ulGallery.append(...arrGallery);
 
-ulGallery.addEventListener("click", (event) => {
-  const newSrc = event.target.dataset.sourse;
-  // const newSrc = event.target.dataset.indexNumber ;
-  // console.log(event.target.dataset);
-  lightbox.classList.add("is-open");
-  lightboxImage.src = newSrc;
-  //   window.addEventListener("keydown", (event) => {
-  //     console.log(event);
-  // console.dir(ulGallery);
+const galleryClick = (event) => {
+  let newIndex = event.target.dataset.index;
+  // let newIndex = event.target.attributes[4].value;
+  // let newIndex = 1;
+  lightboxImage.src = gallery[newIndex - 1].original;
 
-  body.addEventListener("keydown", (event) => {
-    console.log(5);
-    console.log(event.target.dataset);
-    // arrGallery.forEach(el => {
-    // if (){}
-    // }
-    // )
-  });
-});
+  lightbox.classList.add("is-open");
+
+  // const newSrc = event.target.dataset.indexNumber;
+  function hendleIndex(ev) {
+    if (ev.code === "ArrowRight") {
+      newIndex++;
+    }
+    if (ev.code === "ArrowLeft") {
+      newIndex--;
+    }
+    if (newIndex > ulGallery.childElementCount) {
+      newIndex = 1;
+    }
+    if (newIndex < 1) {
+      newIndex = ulGallery.childElementCount;
+    }
+    console.log(newIndex);
+    lightboxImage.src = gallery[newIndex - 1].original;
+  }
+  window.addEventListener("keydown", hendleIndex);
+  window.addEventListener("keydown", escape);
+  // window.removeEventListener("keydown", hendleIndex);
+};
+ulGallery.addEventListener("click", galleryClick);
 
 lightboxButton.addEventListener("click", () => {
   lightbox.classList.remove("is-open");
   lightboxImage.src = "";
+  // window.removeEventListener("keydown", hendleIndex);
 });
 lightbox.addEventListener("click", () => {
   lightbox.classList.remove("is-open");
   lightboxImage.src = "";
+  // window.removeEventListener("keydown", hendleIndex);
 });
 
-window.addEventListener("keydown", (event) => {
+const escape = (event) => {
   console.log(event);
   if (event.code === "Escape") {
+    // window.removeEventListener("keydown", hendleIndex);
+
     lightbox.classList.remove("is-open");
     lightboxImage.src = "";
+    window.removeEventListener("keydown", escape);
   }
-});
+};
