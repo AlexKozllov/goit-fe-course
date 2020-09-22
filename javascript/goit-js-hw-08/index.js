@@ -45,6 +45,7 @@ const hendleIndex = (ev) => {
 };
 
 const closeLightBox = () => {
+  if (event.target.tagName === "IMG") return;
   lightbox.classList.remove("is-open");
   lightboxImage.src = "";
   window.removeEventListener("keydown", hendleEscape);
