@@ -44,12 +44,16 @@ const hendleIndex = (ev) => {
   lightboxImage.src = gallery[newIndex - 1].original;
 };
 
+const closeLightBox = () => {
+  lightbox.classList.remove("is-open");
+  lightboxImage.src = "";
+  window.removeEventListener("keydown", hendleEscape);
+  window.removeEventListener("keydown", hendleIndex);
+};
+
 const hendleEscape = (event) => {
   if (event.code === "Escape") {
-    lightbox.classList.remove("is-open");
-    lightboxImage.src = "";
-    window.removeEventListener("keydown", hendleEscape);
-    window.removeEventListener("keydown", hendleIndex);
+    closeLightBox();
   }
 };
 
@@ -62,13 +66,6 @@ const hendleGalleryClick = (event) => {
   lightboxImage.src = gallery[newIndex - 1].original;
   window.addEventListener("keydown", hendleIndex);
   window.addEventListener("keydown", hendleEscape);
-};
-
-const closeLightBox = () => {
-  lightbox.classList.remove("is-open");
-  lightboxImage.src = "";
-  window.removeEventListener("keydown", hendleEscape);
-  window.removeEventListener("keydown", hendleIndex);
 };
 
 ulGallery.addEventListener("click", hendleGalleryClick);
