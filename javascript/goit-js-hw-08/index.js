@@ -64,18 +64,15 @@ const hendleGalleryClick = (event) => {
   window.addEventListener("keydown", hendleEscape);
 };
 
+const closeLightBox = () => {
+  lightbox.classList.remove("is-open");
+  lightboxImage.src = "";
+  window.removeEventListener("keydown", hendleEscape);
+  window.removeEventListener("keydown", hendleIndex);
+};
+
 ulGallery.addEventListener("click", hendleGalleryClick);
 
-lightboxButton.addEventListener("click", () => {
-  lightbox.classList.remove("is-open");
-  lightboxImage.src = "";
-  window.removeEventListener("keydown", hendleEscape);
-  window.removeEventListener("keydown", hendleIndex);
-});
+lightboxButton.addEventListener("click", closeLightBox);
 
-lightbox.addEventListener("click", () => {
-  lightbox.classList.remove("is-open");
-  lightboxImage.src = "";
-  window.removeEventListener("keydown", hendleEscape);
-  window.removeEventListener("keydown", hendleIndex);
-});
+lightbox.addEventListener("click", closeLightBox);
